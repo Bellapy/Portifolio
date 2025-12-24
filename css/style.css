@@ -61,3 +61,70 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+/* ============================================= */
+/* 3. CABEÇALHO E NAVEGAÇÃO                      */
+/* ============================================= */
+
+/* MODIFICATION START */
+.main-header {
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%; /* Consistente com o padding das seções */
+    display: flex;
+    justify-content: center; /* Centraliza a navegação */
+    align-items: center;
+    z-index: 1000; /* Garante que o header fique sobre todo o conteúdo */
+    
+    /* O efeito Glassmorphism */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border-color);
+    
+    /* Animação suave para futuras mudanças */
+    transition: background 0.3s ease;
+}
+
+.main-nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens horizontalmente */
+    gap: 40px; /* Espaço entre os itens do menu */
+}
+
+.main-nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative; /* Necessário para o pseudo-elemento ::after */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Microinteração no hover */
+.main-nav a:hover {
+    color: var(--secondary-accent);
+}
+
+/* Efeito de sublinhado animado no hover */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-accent);
+    transform: scaleX(0); /* Começa invisível */
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1); /* Expande a linha no hover */
+}
+/* MODIFICATION END */
