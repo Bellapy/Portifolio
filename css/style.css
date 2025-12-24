@@ -1,0 +1,63 @@
+/* ============================================= */
+/* 1. FONTES E CONFIGURAÇÕES GLOBAIS             */
+/* ============================================= */
+
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Definindo nossas variáveis de design (Design Tokens) */
+:root {
+    --bg-gradient-start: #0f0c29;
+    --bg-gradient-mid: #302b63;
+    --bg-gradient-end: #24243e;
+    
+    --primary-accent: #8e44ad;
+    --secondary-accent: #3498db;
+    
+    --text-color: #f0f0f0;
+    --text-color-muted: #a7a7a7;
+
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Reset global e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Ativa a rolagem suave para links de âncora (#) */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-mid), var(--bg-gradient-end));
+    background-attachment: fixed; /* Garante que o gradiente não role com a página */
+    overflow-x: hidden; /* Previne scroll horizontal acidental */
+}
+
+/* ============================================= */
+/* 2. ESTILOS DE UTILIDADE E LAYOUT              */
+/* ============================================= */
+
+.section {
+    padding: 100px 10%; /* Espaçamento interno para todas as seções */
+    min-height: 100vh;  /* Garante que cada seção ocupe pelo menos a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
