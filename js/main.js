@@ -1,37 +1,72 @@
-// Aguarda o DOM estar completamente carregado antes de executar o script
-document.addEventListener('DOMContentLoaded', () => {
+/* REVEAL */
+const elements = document.querySelectorAll('.reveal, .reveal-left');
 
-    // Seleciona todos os elementos que devem ser revelados ao rolar
-    const elementsToReveal = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
 
-    // Configurações para o Intersection Observer
-    // threshold: 0.1 significa que o callback será acionado quando 10% do elemento estiver visível
-    const observerOptions = {
-        root: null, // Observa em relação à viewport do navegador
-        rootMargin: '0px',
-        threshold: 0.1 
-    };
+elements.forEach(el => observer.observe(el));
 
-    // A função que será executada quando um elemento observado cruzar o threshold
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            // Verifica se o elemento está 'intersectando' (visível) na viewport
-            if (entry.isIntersecting) {
-                // Adiciona a classe 'visible' para acionar a transição CSS
-                entry.target.classList.add('visible');
-                
-                // [Otimização] Para de observar o elemento uma vez que ele já foi revelado
-                observer.unobserve(entry.target);
-            }
-        });
-    };
 
-    // Cria uma nova instância do observador
-    const observer = new IntersectionObserver(revealCallback, observerOptions);
+/* QUEM EU SOU – efeito interativo */
+const whoCard = document.querySelector('.who-card');
 
-    // Pede ao observador para monitorar cada um dos elementos selecionados
-    elementsToReveal.forEach(element => {
-        observer.observe(element);
-    });
+if (whoCard) {
+  whoCard.addEventListener('mousemove', e => {
+    const rect = whoCard.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
 
+    whoCard.style.setProperty('--mx', `${x}%`);
+    whoCard.style.setProperty('--my', `${y}%`);
+  });
+}
+
+
+/* ORB DE VIDRO */
+const orb = document.querySelector('.glass-orb');
+
+if (orb) {
+  document.addEventListener('mousemove', e => {
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+    orb.style.transform = `translate(${x}px, ${y}px)`;
+  });
+}
+
+
+/* VÍDEOS DOS PROJETOS */
+document.querySelectorAll('.project-card').forEach(card => {
+  const video = card.querySelector('video');
+  if (!video) return;
+
+  card.addEventListener('mouseenter', () => {
+    video.currentTime = 0;
+    video.play().catch(() => {});
+  });
+
+  card.addEventListener('mouseleave', () => {
+    video.pause();
+  });
 });
+
+
+/* CURSOR CUSTOM */
+const cursor = document.querySelector('.custom-cursor');
+const glow = document.querySelector('.cursor-glow');
+
+if (cursor && glow) {
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+
+    glow.style.left = `${e.clientX}px`;
+    glow.style.top = `${e.clientY}px`;
+  });
+}

@@ -1,65 +1,267 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Título da Página -->
-    <title>Seu Nome | Desenvolvedor Frontend</title>
-    
-    <!-- Link para a folha de estilos -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Link para o script, com 'defer' para melhor performance -->
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isabella Dreher | Portfólio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
-    <!-- Cabeçalho Fixo com a Navegação -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+  <nav class="nav">
+    <a href="#sobre">Sobre</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#tech">Tecnologias</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-    <!-- Conteúdo Principal da Página -->
-    <main>
-        <!-- Seção Sobre -->
-        <section id="sobre" class="section">
-            <h2>Sobre Mim</h2>
-            <!-- Conteúdo da seção 'Sobre' virá aqui -->
-        </section>
+<main>
 
-        <!-- Seção Eventos & Participações -->
-        <section id="eventos" class="section">
-            <h2>Eventos & Participações</h2>
-            <!-- Conteúdo da seção 'Eventos' virá aqui -->
-        </section>
+<!-- SOBRE -->
+<section id="sobre" class="section about">
+  <div class="about-text reveal-left">
+    <h1>Isabella Dreher</h1>
 
-        <!-- Seção Projetos -->
-        <section id="projetos" class="section">
-            <h2>Meus Projetos</h2>
-            <!-- Conteúdo da seção 'Projetos' virá aqui -->
-        </section>
+    <p class="about-highlight">
+      Olá! Seja bem-vindo ao meu portfólio. Sou estudante de desenvolvimento front-end.
+    </p>
 
-        <!-- Seção Tecnologias -->
-        <section id="tecnologias" class="section">
-            <h2>Tecnologias</h2>
-            <!-- Conteúdo da seção 'Tecnologias' virá aqui -->
-        </section>
+    <p>
+      Role para baixo e descubra um pouco mais sobre mim e minha jornada no desenvolvimento web.
+    </p>
+  </div>
 
-        <!-- Seção Contato -->
-        <section id="contato" class="section">
-            <h2>Contato</h2>
-            <!-- Conteúdo da seção 'Contato' virá aqui -->
-        </section>
-    </main>
+  <div class="about-effect reveal">
+    <div class="glass-orb"></div>
+  </div>
+</section>
+
+<!-- QUEM EU SOU -->
+<section id="sobremim" class="section who">
+  <h2 class="who-title">Quem eu sou?</h2>
+
+  <div class="who-card reveal">
+    <p>
+      Sou estudante de desenvolvimento web, com grande interesse em front-end e na criação de aplicações que integram inteligência artificial. Tenho um perfil curioso, gosto de aprender coisas novas e participo ativamente de eventos de tecnologia, sempre buscando evoluir não apenas tecnicamente, mas também na minha comunicação.
+      <br><br>
+      Mais do que escrever código, procuro transformar ideias, sentimentos e conceitos em experiências digitais que façam sentido para quem interage. Acredito que design, código e inteligência artificial caminham juntos quando o objetivo é criar interfaces claras, sensíveis e verdadeiramente impactantes.
+    </p>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos" class="section">
+  <h2 class="section-title reveal">Eventos & Participações</h2>
+
+  <div class="events-scroll reveal">
+
+    <article class="event-card">
+      <div class="event-image">
+        <img src="assets/images/image.png" alt="Hackatime">
+      </div>
+      <div class="event-info">
+        <h3>Hackatime – 2025</h3>
+        <p>
+          Participei do Hackatime, onde desenvolvi habilidades de comunicação e trabalho em equipe. Minha equipe conquistou o 3º lugar com o projeto GrowMoney.
+        </p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-image">
+        <img src="assets/images/taquarasummit.jpg" alt="Taquara Summit">
+      </div>
+      <div class="event-info">
+        <h3>Taquara Summit – 2024 & 2025</h3>
+        <p>
+          Participei do Taquara Summit por dois anos consecutivos, um evento voltado à inovação e ao empreendedorismo, que fortaleceu ainda mais minha vontade de desenvolver e inovar.
+        </p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-image">
+        <img src="assets/images/crisdu.jpeg" alt="Workshop CRISDU">
+      </div>
+      <div class="event-info">
+        <h3>Workshop de Inovação e IA – 2025</h3>
+        <p>
+          Workshop promovido pela CRISDU Labs, onde aprendi sobre processos reais de desenvolvimento, uso prático de IA e a importância das soft skills.
+        </p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-image">
+        <img src="assets/images/febic3.jpg" alt="FEBIC">
+      </div>
+      <div class="event-info">
+        <h3>FEBIC – 2025</h3>
+        <p>
+          Através da FEINTEC (CIMOL), conquistei uma credencial para a FEBIC em Santa Catarina com o projeto EPIPHANY – Jornada Digital para Reflexão sobre o Meio Ambiente.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="section">
+  <h2 class="section-title reveal">Projetos</h2>
+
+  <div class="projects-grid reveal">
+
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/Captura de tela 2025-12-23 132113.png" alt="Synapse">
+        <video src="assets/images/synapse.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-content">
+        <h3>Synapse</h3>
+        <p>
+          Gráfico de conhecimento dinâmico alimentado por IA generativa,
+          desenvolvido com React, FastAPI e Google Gemini.
+        </p>
+        <div class="project-actions">
+          <a href="https://synapse-six-inky.vercel.app/" target="_blank" class="btn primary">Ver Deploy</a>
+          <a href="https://github.com/Bellapy/synapse" target="_blank" class="btn outline">Ver Código</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/filmverdse.png" alt="FilmVerse">
+        <video src="assets/images/filmverde.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-content">
+        <h3>FilmVerse</h3>
+        <p>
+          Plataforma de catálogo e avaliação de filmes construída com a stack MERN
+          e a API do TMDB.
+        </p>
+        <div class="project-actions">
+          <a href="https://filmverse-amber.vercel.app/" target="_blank" class="btn primary">Ver Deploy</a>
+          <a href="https://github.com/Bellapy/Filmverse" target="_blank" class="btn outline">Ver Código</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/lapida.png" alt="Lápida">
+        <video src="assets/images/lapida.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-content">
+        <h3>LÁPIDA</h3>
+        <p>
+          Aplicação de to-do list inspirada no Efeito Borboleta, focada em crescimento
+          pessoal por meio de pequenas ações consistentes.
+        </p>
+        <div class="project-actions">
+          <a href="https://lapida-i2s2-8v5l1upuf-isabellas-projects-e928d57f.vercel.app/" target="_blank" class="btn primary">Ver Deploy</a>
+          <a href="https://github.com/Bellapy/Lapida" target="_blank" class="btn outline">Ver Código</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-media">
+        <img src="assets/images/epiphany.png" alt="Epiphany">
+        <video src="assets/images/epiphany.mp4" muted loop playsinline></video>
+      </div>
+      <div class="project-content">
+        <h3>Epiphany</h3>
+        <p>
+          Jogo desenvolvido na Unity com foco em conscientização ambiental,
+          utilizando C# como linguagem principal.
+        </p>
+        <div class="project-actions">
+          <a href="https://bellapy.itch.io/epiphany" target="_blank" class="btn primary">Ver Projeto</a>
+          <a href="https://github.com/Bellapy/Epiphany" target="_blank" class="btn outline">Ver Código</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- TECNOLOGIAS -->
+<section id="tech" class="section">
+  <h2 class="section-title reveal">Tecnologias</h2>
+
+  <div class="tech-list">
+    <span class="tech reveal">HTML</span>
+    <span class="tech reveal delay">CSS</span>
+    <span class="tech reveal">JavaScript</span>
+    <span class="tech reveal delay">React</span>
+    <span class="tech reveal">Git</span>
+    <span class="tech reveal delay">TypeScript</span>
+    <span class="tech reveal">Tailwind</span>
+    <span class="tech reveal delay">PostgreSQL</span>
+    <span class="tech reveal">IA</span>
+    <span class="tech reveal delay">Python</span>
+    <span class="tech reveal">MongoDB</span>
+    <span class="tech reveal delay">C#</span>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section contact">
+  <h2 class="section-title reveal">Contato</h2>
+  <p class="reveal">Vamos criar algo com sentido.</p>
+
+  <div class="contact-links">
+
+    <a href="https://www.linkedin.com/in/isabella-dreher-0254ab359/"
+       target="_blank"
+       class="contact-item">
+      <img src="assets/images/linkedin-svgrepo-com.png" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/Bellapy"
+       target="_blank"
+       class="contact-item">
+      <img src="assets/images/github.png" alt="GitHub">
+      <span>GitHub</span>
+    </a>
+
+    <!-- EMAIL (COPIAR) -->
+    <div class="contact-item copy-item" onclick="copyText('isabella.emerichs@gmail.com')">
+      <img src="assets/images/email-svgrepo-com.png" alt="Email">
+      <span>isabella.emerichs@gmail.com</span>
+    </div>
+
+    <!-- TELEFONE (COPIAR) -->
+    <div class="contact-item copy-item" onclick="copyText('+55 51 9540-6290')">
+      <img src="assets/images/phone-svgrepo-com (1).png" alt="Telefone">
+      <span>+55 51 9540-6290</span>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<script>
+  function copyText(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copiado!");
+  }
+</script>
+<div class="custom-cursor"></div>
+<div class="cursor-glow"></div>
 
 </body>
 </html>
